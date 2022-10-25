@@ -1,0 +1,499 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins';
+    margin: 0;
+}
+
+$max-width: 1440px;
+
+/**
+ * Reuseables
+ */
+.btn--primary {
+    background-color: #C20502;
+    padding: 20px 40px;
+    border: none;
+
+    font-size: 1em;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.btn--secondary {
+    background-color: #FFFFFF;
+    padding: 20px 40px;
+    border: none;
+
+    font-size: 1em;
+    font-weight: 500;
+    color: #C20502;
+}
+
+.container {
+    max-width: $max-width;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.section__bg-title {
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    color: #292733;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
+}
+
+.products__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em;
+
+    .product__grid-item {
+        .product__grid-image {
+            background-color: #F5F5F5;
+            width: 100%;
+        }
+
+        .product__grid-country,
+        .product__grid-price {
+            margin: 0;
+        }
+
+        .product__grid-dimensions {
+            margin-top: .5em;
+            margin-bottom: .5em;
+
+            font-family: 'Roboto Slab';
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        
+        .product__grid-country {
+            color: #888888;
+            font-family: 'Roboto Slab';
+            font-weight: 500;
+            font-size: .8em;
+            text-transform: uppercase;
+        }
+
+        .product__grid-price {
+            color: #C20502;
+            font-weight: 700;
+            font-size: 1em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+/**
+ * Header Section
+ */
+.header__container {
+    background-color: #292733;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .header__navbar {   
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 20fr 60fr 20fr;
+        align-items: center;
+        justify-items: center;
+
+        &-menu {
+            .navbar__menu-list {
+                list-style: none;
+                display: flex;
+                gap: 1em;
+                padding-left: 0;
+                
+                .navbar__menu-item {
+                    color: #FFFFFF;
+                    font-weight: 500;
+                    font-size: 1em;
+                    line-height: 24px;
+                    text-transform: uppercase;
+
+                    &.menu__item-active {
+                        color: #C20502;
+                    }
+                }
+            }
+        }
+        
+        &-icons {
+            display: flex;
+            flex-direction: row;
+            gap: .5em;
+        }
+    }
+}
+
+/**
+ * Hero banner
+ */
+.hero__banner_container {
+    background-image: url('../images/Rectangle\ 2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 750px;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+
+    .hero__banner-content {
+        margin: auto;
+        height: 100%;
+        text-align: right;
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .hero__banner-title {
+            margin: 0;
+            font-size: 5rem;
+            font-family: 'Roboto Slab';
+            color: #292733;
+        }
+
+        .hero__banner-text {
+            width: 47%;
+            margin-left: auto;
+
+            font-size: 1.3em;
+        }
+
+        .hero__banner-line {
+            width: 10%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+/**
+ * Item Types Section
+ */
+.item__types-container {
+    background-color: #C20502;
+    min-height: 300px;
+    display: flex;
+
+    .item__types-list {
+        width: 100%;
+        margin: auto;
+        height: auto;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        justify-items: center;
+
+        .item__types-item {
+            text-align: center;
+
+            .item__type-title {
+                color: #FFFFFF;
+                font-size: 1.3em;
+                font-family: 'Roboto Slab';
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/**
+ * Find Us CTA section
+ */
+.find__cta-container {
+    min-height: 500px;
+    display: flex;
+
+    .find__cta-wrapper {
+        min-height: 500px;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 40fr 60fr;
+
+        .find__cta-column {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: grid;
+            justify-items: center;
+            align-items: center;
+
+            &:first-child {
+                background-image: url('../images/Rectangle 9.png');
+            }
+
+            &:last-child {
+                background-image: url('../images/Rectangle 10.png');
+            }
+
+            .find__cta-content {
+                text-align: center;
+
+                .find__cta-title {
+                    font-size: 2rem;
+                    font-family: 'Roboto Slab';
+                    margin: 0;
+                    margin-bottom: .5em;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Content CTA Section
+ */
+.content__cta-container {
+    background-image: url('../images/Rectangle 83.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    min-height: 550px;
+    display: flex;
+
+    .content__cta-content {
+        width: 50%;
+        margin: auto;
+
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .content__cta-title {
+            margin: 0;
+            color: #FFFFFF;
+            font-size: 3rem;
+            font-family: 'Roboto Slab';
+        }
+
+        .content__cta-text {
+            color: #FFFFFF;
+            font-size: 1em;
+        }
+    }
+}
+
+/**
+ * Shop Now CTA
+ */
+.shopnow__cta-container {
+    position: relative;
+
+    .shopnow__cta-wrapper {
+        min-height: 500px;
+        margin: auto;
+        padding-bottom: 5rem;
+
+        display: grid;
+        grid-template-columns: 60fr 40fr;
+
+        .shopnow__cta-column {
+            &:first-child {
+                background-color: #000000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .shopnow__cta-content {
+                    width: 30%;
+                    margin-left: auto;
+
+                    .shopnow__cta-title {
+                        font-size: 2rem;
+                        font-family: 'Roboto Slab';
+                        margin: 0;
+                        margin-bottom: .5em;
+                        color: #FFFFFF;
+                    }
+                }
+
+            }
+
+            &:last-child {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .shopnow__cta-product {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    text-align: center;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .shopnow__cta-info {
+                        text-transform: uppercase;
+                    }
+
+                    .shopnow__cta-dimensions {
+                        font-size: 2rem;
+                        font-family: 'Roboto Slab';
+                        color: #292733;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .shopnow__cta-bg-image {
+        position: absolute;
+        left: 0;
+        top: 10%;
+    }
+}
+
+/**
+ * Timbers Section
+ */
+.timbers__container {
+    margin: auto;
+    margin-top: 3rem;
+}
+
+/**
+ * Order Now CTA
+ */
+.order__cta-container {
+    margin: auto;
+    margin-top: 5rem;
+    min-height: 590px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .order__cta-column {
+        &:first-child {
+            background-image: url('../images/Rectangle 84.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &:last-child {
+            background-color: #C20502;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .order__cta-content {
+                width: 80%;
+
+                .order__cta-title {
+                    font-size: 2rem;
+                    font-family: 'Roboto Slab';
+                    margin: 0;
+                    margin-bottom: .5em;
+                    color: #FFFFFF;
+                }
+
+                .btn--secondary {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Two CTA Section
+ */
+.two__cta-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 480px;
+    margin-top: 5rem;
+
+    .two__cta-column {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:first-child {
+            background-image: url('../images/Rectangle 17.png');
+        }
+
+        &:last-child {
+            background-image: url('../images/Rectangle 18.png');
+        }
+    }
+}
+
+/**
+ * Featured Product Section
+ */
+.featured__product-container {
+    margin: auto;
+    min-height: 600px;
+    display: flex;
+
+    background-image: url('../images/Rectangle 2 (1).png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .featured__product {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin: auto;
+        text-align: center;
+
+        *:not(.btn--secondary) {
+            color: #FFFFFF;
+        }
+
+        &-info,
+        &-details {
+            font-size: 1em;
+        }
+
+        &-info {
+            text-transform: uppercase;
+        }
+
+        &-title {
+            font-size: 4rem;
+            font-family: 'Roboto Slab';
+            margin: 0;
+            text-transform: uppercase;
+        }
+    }
+}
+
+/**
+ * Products Section
+ */
+.products__container {
+    margin: auto;
+}
