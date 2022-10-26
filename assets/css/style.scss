@@ -8,29 +8,36 @@ body {
     margin: 0;
 }
 
+/**
+ * Define Variables
+ */
 $max-width: 1440px;
+$color-red: #C20502;
+$color-white: #FFFFFF;
+$color-dark: #292733;
+$color-secondary: #888888;
 
 /**
  * Reuseables
  */
 .btn--primary {
-    background-color: #C20502;
+    background-color: $color-red;
     padding: 20px 40px;
     border: none;
 
     font-size: 1em;
     font-weight: 500;
-    color: #FFFFFF;
+    color: $color-white;
 }
 
 .btn--secondary {
-    background-color: #FFFFFF;
+    background-color: $color-white;
     padding: 20px 40px;
     border: none;
 
     font-size: 1em;
     font-weight: 500;
-    color: #C20502;
+    color: $color-red;
 }
 
 .container {
@@ -44,7 +51,7 @@ $max-width: 1440px;
     font-weight: 700;
     font-size: 3rem;
     text-align: center;
-    color: #292733;
+    color: $color-dark;
 }
 
 .mb-4 {
@@ -77,7 +84,7 @@ $max-width: 1440px;
         }
         
         .product__grid-country {
-            color: #888888;
+            color: $color-secondary;
             font-family: 'Roboto Slab';
             font-weight: 500;
             font-size: .8em;
@@ -85,7 +92,7 @@ $max-width: 1440px;
         }
 
         .product__grid-price {
-            color: #C20502;
+            color: $color-red;
             font-weight: 700;
             font-size: 1em;
             text-transform: uppercase;
@@ -97,7 +104,7 @@ $max-width: 1440px;
  * Header Section
  */
 .header__container {
-    background-color: #292733;
+    background-color: $color-dark;
     padding-top: 1rem;
     padding-bottom: 1rem;
 
@@ -117,14 +124,14 @@ $max-width: 1440px;
                 padding-left: 0;
                 
                 .navbar__menu-item {
-                    color: #FFFFFF;
+                    color: $color-white;
                     font-weight: 500;
                     font-size: 1em;
                     line-height: 24px;
                     text-transform: uppercase;
 
                     &.menu__item-active {
-                        color: #C20502;
+                        color: $color-red;
                     }
                 }
             }
@@ -164,7 +171,7 @@ $max-width: 1440px;
             margin: 0;
             font-size: 5rem;
             font-family: 'Roboto Slab';
-            color: #292733;
+            color: $color-dark;
         }
 
         .hero__banner-text {
@@ -187,7 +194,7 @@ $max-width: 1440px;
  * Item Types Section
  */
 .item__types-container {
-    background-color: #C20502;
+    background-color: $color-red;
     min-height: 300px;
     display: flex;
 
@@ -205,7 +212,7 @@ $max-width: 1440px;
             text-align: center;
 
             .item__type-title {
-                color: #FFFFFF;
+                color: $color-white;
                 font-size: 1.3em;
                 font-family: 'Roboto Slab';
                 margin-bottom: 0;
@@ -253,7 +260,7 @@ $max-width: 1440px;
                     font-family: 'Roboto Slab';
                     margin: 0;
                     margin-bottom: .5em;
-                    color: #FFFFFF;
+                    color: $color-white;
                 }
             }
         }
@@ -284,13 +291,13 @@ $max-width: 1440px;
 
         .content__cta-title {
             margin: 0;
-            color: #FFFFFF;
+            color: $color-white;
             font-size: 3rem;
             font-family: 'Roboto Slab';
         }
 
         .content__cta-text {
-            color: #FFFFFF;
+            color: $color-white;
             font-size: 1em;
         }
     }
@@ -326,7 +333,7 @@ $max-width: 1440px;
                         font-family: 'Roboto Slab';
                         margin: 0;
                         margin-bottom: .5em;
-                        color: #FFFFFF;
+                        color: $color-white;
                     }
                 }
 
@@ -356,7 +363,7 @@ $max-width: 1440px;
                     .shopnow__cta-dimensions {
                         font-size: 2rem;
                         font-family: 'Roboto Slab';
-                        color: #292733;
+                        color: $color-dark;
                         font-weight: 700;
                     }
                 }
@@ -399,7 +406,7 @@ $max-width: 1440px;
         }
 
         &:last-child {
-            background-color: #C20502;
+            background-color: $color-red;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -412,7 +419,7 @@ $max-width: 1440px;
                     font-family: 'Roboto Slab';
                     margin: 0;
                     margin-bottom: .5em;
-                    color: #FFFFFF;
+                    color: $color-white;
                 }
 
                 .btn--secondary {
@@ -470,7 +477,7 @@ $max-width: 1440px;
         text-align: center;
 
         *:not(.btn--secondary) {
-            color: #FFFFFF;
+            color: $color-white;
         }
 
         &-info,
@@ -496,4 +503,95 @@ $max-width: 1440px;
  */
 .products__container {
     margin: auto;
+
+    .products__grid-pagination {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .btn__paginate {
+            font-size: 1em;
+            color: $color-red;
+            background-color: $color-white;
+            border: none;
+            box-shadow: 0px 10px 15px -3px rgb(0 0 0 / 10%);
+            padding: .7em 1em;
+            font-weight: bold;
+
+            &.btn__paginate-active {
+                background-color: $color-red;
+                color: $color-white;
+            }
+
+            :first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            :last-child {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+    }
+}
+
+/**
+ * Newsletter CTA
+ */
+.newsletter__cta {
+    margin: auto;
+    min-height: 350px;
+    background-color: $color-red;
+    margin-top: 5rem;
+
+    display: flex;
+
+    .newsletter__cta-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 60%;
+        margin: auto;
+
+        .newsletter__cta-title {
+            color: $color-white;
+            font-family: 'Roboto Slab';
+            font-weight: 700;
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin: 0;
+        }
+    
+        .newsletter__cta-text {
+            font-size: 1em;
+            font-weight: 500;
+            color: $color-white;
+        }
+
+        .newsletter__form {
+            display: flex;
+            width: 100%;
+
+            .newsletter__form-email {
+                padding: 1.8em 4em;
+                width: 100%;
+
+                background: $color-white url('../images/image 15.png') no-repeat;
+                background-position: 95% center;
+                border: 0;
+
+                &::placeholder {
+                    color: $color-secondary;
+                    font-size: 1.1em;
+                    font-family: 'Poppins';
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
 }

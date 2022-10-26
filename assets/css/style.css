@@ -9,6 +9,9 @@ body {
 }
 
 /**
+ * Define Variables
+ */
+/**
  * Reuseables
  */
 .btn--primary {
@@ -419,4 +422,92 @@ body {
  */
 .products__container {
   margin: auto;
+}
+.products__container .products__grid-pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.products__container .products__grid-pagination .btn__paginate {
+  font-size: 1em;
+  color: #C20502;
+  background-color: #FFFFFF;
+  border: none;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 0.7em 1em;
+  font-weight: bold;
+}
+.products__container .products__grid-pagination .btn__paginate.btn__paginate-active {
+  background-color: #C20502;
+  color: #FFFFFF;
+}
+.products__container .products__grid-pagination .btn__paginate :first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.products__container .products__grid-pagination .btn__paginate :last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/**
+ * Newsletter CTA
+ */
+.newsletter__cta {
+  margin: auto;
+  min-height: 350px;
+  background-color: #C20502;
+  margin-top: 5rem;
+  display: flex;
+}
+.newsletter__cta .newsletter__cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+}
+.newsletter__cta .newsletter__cta-wrapper .newsletter__cta-title {
+  color: #FFFFFF;
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+.newsletter__cta .newsletter__cta-wrapper .newsletter__cta-text {
+  font-size: 1em;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.newsletter__cta .newsletter__cta-wrapper .newsletter__form {
+  display: flex;
+  width: 100%;
+}
+.newsletter__cta .newsletter__cta-wrapper .newsletter__form .newsletter__form-email {
+  padding: 1.8em 4em;
+  width: 100%;
+  background: #FFFFFF url("../images/image 15.png") no-repeat;
+  background-position: 95% center;
+  border: 0;
+}
+.newsletter__cta .newsletter__cta-wrapper .newsletter__form .newsletter__form-email::-moz-placeholder {
+  color: #888888;
+  font-size: 1.1em;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+.newsletter__cta .newsletter__cta-wrapper .newsletter__form .newsletter__form-email:-ms-input-placeholder {
+  color: #888888;
+  font-size: 1.1em;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+.newsletter__cta .newsletter__cta-wrapper .newsletter__form .newsletter__form-email::placeholder {
+  color: #888888;
+  font-size: 1.1em;
+  font-family: "Poppins";
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
