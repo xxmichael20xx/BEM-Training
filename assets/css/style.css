@@ -510,4 +510,66 @@ body {
   font-size: 1.1em;
   font-family: "Poppins";
   font-weight: 500;
+}
+
+/**
+ * Footer Section
+ */
+.hero__footer .hero__footer-row:first-child {
+  min-height: 300px;
+  background-color: #292733;
+}
+.hero__footer .hero__footer-row .hero__footer-links {
+  max-width: 1440px;
+  margin: auto;
+  padding: 4em 0;
+  display: grid;
+  grid-template-columns: 40fr 20fr 20fr 20fr;
+  grid-gap: 2em;
+}
+.hero__footer .hero__footer-row .hero__footer-links .hero__footer-company .hero__footer-contact {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-family: "Poppins";
+  font-size: 1em;
+}
+.hero__footer .hero__footer-row .hero__footer-links .hero__footer-menu .hero__footer-title {
+  font-weight: 500;
+  font-family: "Poppins";
+  color: #FFFFFF;
+  font-size: 2em;
+}
+.hero__footer .hero__footer-row .hero__footer-links .hero__footer-menu .hero__footer-list {
+  list-style: none;
+  padding-left: 0;
+}
+.hero__footer .hero__footer-row .hero__footer-links .hero__footer-menu .hero__footer-list .hero__footer-item {
+  color: #888888;
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+.hero__footer .hero__footer-row:last-child {
+  min-height: 150px;
+  background-color: #17161D;
+  display: flex;
+}
+.hero__footer .hero__footer-row .hero__footer-content {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hero__footer .hero__footer-row .hero__footer-content .hero__footer-text {
+  font-size: 1em;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 0;
+}
+.hero__footer .hero__footer-row .hero__footer-content .hero__footer-image {
+  width: auto;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */

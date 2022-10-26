@@ -15,6 +15,7 @@ $max-width: 1440px;
 $color-red: #C20502;
 $color-white: #FFFFFF;
 $color-dark: #292733;
+$color-darker: #17161D;
 $color-secondary: #888888;
 
 /**
@@ -593,5 +594,86 @@ $color-secondary: #888888;
             }
         }
     }
+}
 
+/**
+ * Footer Section
+ */
+.hero__footer {
+    .hero__footer-row {
+
+        &:first-child {
+            min-height: 300px;
+            background-color: $color-dark;
+        }
+
+        .hero__footer-links {
+            max-width: $max-width;
+            margin: auto;
+            padding: 4em 0;
+
+            display: grid;
+            grid-template-columns: 40fr 20fr 20fr 20fr;
+            grid-gap: 2em;
+
+            .hero__footer-company {
+                .hero__footer-contact {
+                    color: $color-white;
+                    font-weight: 500;
+                    font-family: 'Poppins';
+                    font-size: 1em;
+                }
+            }
+
+            .hero__footer-menu {
+                .hero__footer-title {
+                    font-weight: 500;
+                    font-family: 'Poppins';
+                    color: $color-white;
+                    font-size: 2em;
+                }
+
+                .hero__footer-list {
+                    list-style: none;
+                    padding-left: 0;
+
+                    .hero__footer-item {
+                        color: $color-secondary;
+                        font-size: 1em;
+                        font-weight: 400;
+                        margin-bottom: 1em;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            min-height: 150px;
+            background-color: $color-darker;
+            display: flex;
+        }
+
+        .hero__footer-content {
+            max-width: $max-width;
+            width: 100%;
+            margin: auto;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .hero__footer-text {
+                font-size: 1em;
+                font-weight: 500;
+                color: $color-white;
+                margin: 0;
+            }
+
+            .hero__footer-image {
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
 }
